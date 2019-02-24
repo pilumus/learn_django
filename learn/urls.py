@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from hello.views import myView
 from todo.views import todoView
-from todo.views import addTodo, deleteTodo
+from todo.views import addTodo, deleteTodo, homelook
 
 urlpatterns = [
+    path('', homelook),
     path('admin/', admin.site.urls),
     path('sayHello/', myView),
     path('ToDo/', todoView),

@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.http import  HttpResponseRedirect
+from django.http import  HttpResponseRedirect, HttpResponse
 from .models import TodoItem
+
+def homelook(request):
+    return render(request, template_name = 'homepage.html')
 
 def todoView(request):
     all_todo_items = TodoItem.objects.all()
